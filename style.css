@@ -1,3 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+}
 #titulo{
     color: red;
 }
@@ -15,25 +21,20 @@ div h2, div h3{
     color: rgb(210, 30, 171);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
-    font-family: "Poppins", sans-serif;
-}
 .color{
     color: rgb(255, 0, 0);
 }
 div{
+
     border-style: double;
     border-color: black;
     border-radius: 5px;
     border-width: 5px;
-    
     margin: 5px;
     padding: 5px;
 }
 
-div.cuadro1, div.cuadro2, div.cuadro3{
+.cuadro1, div.cuadro2, div.cuadro3{
     width: 50px;
     height: 50px;
 }
@@ -46,12 +47,12 @@ div.cuadro1, div.cuadro2, div.cuadro3{
 .cuadro2{
     border-width: 1px;
 }
-.contenido-margin{
+/* .contenido-margin{
     background-color: chocolate;
     width: 100px;
     overflow: scroll;
     outline: 5px solid red;
-}
+} */
 a:link{
     color: blueviolet;
 }
@@ -70,5 +71,125 @@ ul{
     list-style: none;
     /*Por defecto tiene un padding de 40 px*/
     padding-left: 0;
+    /* list-style-position: inside; */
+   
+}
+
+/* ESTILOS GENERALES DE TABLAS */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Une los bordes para un look más limpio */
+    background-color: #ffffff; /* Fondo blanco para contraste */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que se vean esquinas cuadradas */
+}
+
+/* CABECERAS */
+th {
+    background-color: #0d6efd; /* Color principal */
+    color: #fff;
+    text-align: center;
+    padding: 12px 8px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* CELDAS */
+td {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 10px 8px;
+    font-size: 14px;
+    color: #333;
+}
+/* SELECCIONAR ALGUNOS ELEMENTOS EN PARTICULAR */
+tr:nth-child(even){
+    background-color: #eee;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+tr:hover {
+    background-color: #e9f2ff; /* Fondo azul claro */
+    transition: background-color 0.2s ease;
+}
+
+
+
+table button{
+    width: 90px;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+button.btnActualizar{
+    background-color: #0d6efd;
+    color: #fff;
+}
+button.btnActualizar:hover{
+    background-color: #0b5ed7;
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+button.btnEliminar{
+    background-color: #ffc107;
+    color: #fff;
     
+}
+button.btnEliminar:hover{
+    background-color: #e0a800;
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+    
+}
+
+/*  DISPLAYS */
+/* span{ */
+    /* Display block viene en la mayoria de elementes que se usan en html
+    etiquetas para que ocupe todo el espacio de la pantalla, en este caso
+    se coloca porque span no tiene esa propiedad por defecto, */
+    /* display: block; */
+    /* Display none o visibility none, quieres decir que ocultan los elementos */
+    /* display: none; */
+    /* visibility: hidden; */
+
+/* } */
+/* .inline{
+    hace lo contrario de block 
+    display: inline;
+} */
+
+span{
+    display: block;
+    max-width: 300px; /* es lo contrario de width, cuando la pantalla se 
+    reduzca tambien la propiedad cno su valor*/
+    /* width: 300px; quiere decir que siempre tendra ese hancho
+    y cuando se reduzca el tamaño igual tendra el ancho asignado 
+    y se debe deslizar para ver todo ese contenido*/
+    background-color: red;
+}
+
+/* POSITION */
+/* #position{
+    position: sticky;
+    left: 20px;
+    top: 25px;
+} */
+
+.container{
+    width: 100%;
+    max-width: 600px; /* limita el tamaño total */
+    overflow: hidden; /* evita que la imagen o el texto se salgan */
+    
+}
+.left{
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+.right{
+    float: right;
 }
