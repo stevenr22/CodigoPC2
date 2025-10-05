@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(240, 233, 233);
+}
+
+.container-blog {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 5px;
+}
+
+/* Encabezado */
+header {
+    background-color: rgb(0, 0, 156);
+    color: white;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .titulo{
+    text-align: center;
+}
+header span{
+    color: rgb(165, 162, 162);
+}
+header a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+header i{
+    color: white;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+
+header i:hover{
+    color: coral;
+}
+header a:hover{
+    color: coral;
+    
+}
+/* Menu */
+nav{
+    background-color: rgb(94, 94, 172);
+    padding: 15px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    gap: 25px;
+    
+}
+
+/* Submenu oculto por defecto */
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    background-color: rgb(94, 94, 172);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+/* Mostrar submenu al pasar el mouse */
+nav ul li:hover .submenu {
+    display: block;
+}
+
+/* Estilo de los links del submenu */
+nav ul li .submenu li a {
+    display: block;
+    padding: 8px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li .submenu li a:hover {
+    color: coral;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+nav a:hover {
+  color: coral;
+}
+
+/* Sección principal */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+article {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+}
+
+article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+article img { 
+    width: 100%; 
+    max-height: 250px; 
+    object-fit: contain; 
+    display: block; 
+    margin: 10px auto; 
+    border-radius: 10px; }
+
+/* Tipografía dentro de los artículos */
+article h2 {
+    text-align: center;
+    color: rgb(0, 0, 156);
+}
+
+article span {
+    display: block;
+    text-align: center;
+    color: gray;
+    font-size: 0.9rem;
+}
+
+article p {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 156);
+    color: white;
+    padding: 25px;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: coral;
+    transform: scale(1.05);
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    header {
+        padding: 12px 10px; /* un poco más de espacio vertical y horizontal */
+    }
+
+    header h1 {
+        font-size: 16px;       /* ligeramente más grande para que siga siendo legible */
+        line-height: 1.2;      /* mejor separación entre líneas si se rompe */
+    }
+
+    header span {
+        font-size: 11px;       /* subtítulo proporcional al h1 */
+        line-height: 1.2;      /* separación más cómoda */
+        color: rgb(165, 162, 162); /* mantener color original */
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
