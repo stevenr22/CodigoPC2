@@ -1,16 +1,14 @@
 body{
     background-color: rgb(255, 255, 255);
 }
+/*PERMITE EL MODO RESPONSIVE*/
 .container{
     display: grid;
-    grid-template-columns: repeat(
-        auto-fill,
-        minmax(100px, 1fr)
-    );
-    gap: 16px;
+
+
 }
 img{
     border-radius: 8px;
-    width: 100%;
+    width: 200px;
     height: auto;
 }
