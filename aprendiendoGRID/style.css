@@ -1,0 +1,30 @@
+.container{
+    background-color: lightcoral;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: grid;
+    /*creo las columnas que quiero con su tamaño*/
+    /* auto: quiere decir que el navegador es el que va a decidir cual es el espacio que usara y lo va a usar dependiendo del espacio disponible y el contenido del texto*/
+    /* fraccion o fr: sirve netemente para indicar el tamaño de las columnas de forma proporcional 
+    1fr -> ocupa el 100% del espacio
+    1fr 1fr -> ocupa cada una el 50% 50%*/
+    /* grid-template-columns: 25px repeat(3, 3fr) 1fr;
+    grid-template-rows: repeat(3, 100px);  */
+
+    /* AJUSTA EL TAMAÑO DE CADA FILA */
+    /* grid-template-rows: 100px 50px 30px 100px; */
+
+    /* Grid auto rows, se puede agregar automaticamente se dara una altura por defecto */
+    /* grid-auto-rows: 100px; */
+/* -------------------------------------------- */
+    grid-template-columns: minmax(100px, 1fr) 1fr 1fr;
+}
+.container div{
+    background-color: lightblue;
+    border: 2px solid #09f;
+    border-radius: 6px;
+}
+
+body{
+    background-color: #858181;
+}
