@@ -4,11 +4,29 @@ body{
 /*PERMITE EL MODO RESPONSIVE*/
 .container{
     display: grid;
+    /*CREO LAS COLUMNAS, o aqui mismmo se configura la parte responsiva*/
+    grid-template-columns: repeat(
+        /* ahora pero cuantas columas con el minmax se debe ocupar, no lo sabemos pero con una propiedad de css,  llamada auto-fit, esta permite ubicar el numero de columnas que ocupan el ancho mientras su ancho minimo sea de 200px*/
+        auto-fit,
+        /*COMO MINIMO CADA COLUMNA TIENE QUE OCUPAR 200px o una fraccion*/
+        minmax(200px, 1fr)
+    );
+
+    /*SEPARO O DOY ESPACIO ENTRE LAS COLUMNAS*/
+    /*column-gap: 16px;
+
+    /*SEPARO O DOY ESPACIO ENTRE LAS FILAS*/
+    /*row-gap: 46px;
+
+    /*o en una sola propiedad todo que tenga la misma separacion entre filas y columnas*/
+    gap: 16px;
+
+    
 
 
 }
 img{
     border-radius: 8px;
-    width: 200px;
+    width: 100%;
     height: auto;
 }
