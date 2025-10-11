@@ -1,0 +1,49 @@
+/* style.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+        "header header"
+        "nav main";
+      
+    grid-template-columns: 200px 1fr; /* ancho nav, main flexible, ancho aside */
+    grid-template-rows: 60px 1fr; /* alto header, main flexible, alto footer */
+    gap: 10px; /* espacio entre grid items */
+    padding: 10px;
+}
+
+/* Asignamos las áreas */
+header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+
+
+main {
+    grid-area: main;
+    background-color: #ffffff;
+    padding: 20px;
+}
