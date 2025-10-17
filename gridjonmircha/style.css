@@ -79,18 +79,113 @@ img {
 .grid-explicit .item:nth-child(10) {
     background-color: red;
     /*ESTABLECER EL ELEMENTO DESDE DONDE HAST DONDE*/
-    grid-row-start: 2;
+    /* grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-end: 3; */
 
     /*LO MISMO PERO DE UNA FORMA MAS DIRECTA "cantidad de lineas de filas start / cantidad de lineas de columnas end" */
-    grid-row: 2 / 3;
+    /* grid-row: 2 / 3;
     grid-column: 3 / 4;
 
     grid-row: 3/4;
-    grid-column: 2/3;
+    grid-column: 2/3; */
+
+    /* grid-row: 1 / 2;
+    grid-column: 1 / 5; */
+
 
     /*AHORA QUIERO QUE MI CELDA 10 OCUPE DOS CELDAS*/
-    grid-column: 3/5;
+    /* grid-column: 3/5; */
+
+    /* otro atajo de grid row y column */
+    /* primero row y luego column */
+    grid-area: 2 / 3 / 3 / 5;
+}
+
+.grid-explicit .item:nth-child(12) {
+    background-color: coral;
+    /* SPAN PERMITE OCUPAR ESPACIOS DETERMINANDO CUANTOS NECESITAS */
+    grid-row: span 2;
+    grid-column: span 3;
+
+}
+.grid-explicit .item:nth-child(15) {
+    background-color: rgb(80, 255, 197);
+    /* de forma directa */
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2; 
+}
+
+/* LO MISMO CON NOMBRES A LINEAS */
+.grid-line-names{
+    display: grid;
+    /* GRID 3X3 */
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+   grid-template-columns: []; 
+}
+
+/* MIO DASHBOARD mi version- */
+/* .grid-dashboard{
+    display: grid;
+    gap: 0.2rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 1fr 100px;
+}
+header{
+    background-color: #ff0000;
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+}
+nav{
+    background-color: #e5ff00;
+}
+aside{
+     background-color: #4c00ff;
+}
+main{
+    background-color: #666;
+}
+footer{
+    background-color: #00ff37;
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+} */
+
+/* DASHBOARD CLASES JONMIRCHA */
+.grid-areas{
+    display: grid;
+    /* GRID 2c x 3f */
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px repeat(2,1fr) 60px;
+    /* DEFINIMOS AREAS, en cada fila definir*/
+    grid-template-areas: 
+    "header header"
+    "sidebar content"
+    "sidebar content"
+    "footer footer"
+    ;
+}
+.header{
+    grid-area: header;
+}
+.content{
+    grid-area: content;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.footer{
+    grid-area: footer;
+}
+
+/* GRID IMPLICITA */
+.grid-implicit{
+    /* Grid 4cxX3f */
+    /* AUTO LLENADO DE ESPACIOS AL AGG DINAMICAMENTE ELEMENTOS */
+    display: grid;
+    /* display: inline-grid; */
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,200px);
 }

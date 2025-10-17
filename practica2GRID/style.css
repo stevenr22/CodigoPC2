@@ -4,21 +4,34 @@
     box-sizing: border-box;
    
 }
-/* CODIFICACION GRID */
-/* --------------------------------------------------------- */
-
-
 /* ---------------------------------------------------------------*/
 body{ 
-    background-color: black;
+    background-color: rgb(180, 179, 179);
+}
+/* CODIFICACION GRID */
+/* --------------------------------------------------------- */
+.container{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: repeat(2,60px) 1fr 60px;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "aside content"
+    "footer footer"
+    ;
+    gap: 0.3rem;
+
 }
 /* ---------------------------------------------------------------*/
 
-
-
-
 /* header ---------------------------------------*/
-header{
+.header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
     background-color: rgba(9, 127, 127, 0.608);
 }
 /* ---------------------------------------------------------------*/
@@ -27,7 +40,10 @@ header{
 
 
 /* NAV ---------------------------------------*/
-nav{
+.nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
     background-color: azure;
 }
 /* ---------------------------------------------------------------*/
@@ -36,7 +52,8 @@ nav{
 
 
 /* ASIDE ---------------------------------------*/
-aside{
+.aside{
+    grid-area: aside;
     background-color: brown;
 }
 /* ---------------------------------------------------------------*/
@@ -45,7 +62,8 @@ aside{
 
 
 /* MAIN ---------------------------------------*/
-main{
+.content{
+    grid-area: content;
     background-color: blueviolet;
 }
 /* ---------------------------------------------------------------*/
@@ -55,7 +73,10 @@ main{
 
 
 /* FOOTER ---------------------------------------*/
-footer{
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
     background-color: chocolate;
 }
 /* ---------------------------------------------------------------*/
@@ -63,5 +84,6 @@ footer{
 
 
 @media (max-width: 600px) {
+
     
 }
