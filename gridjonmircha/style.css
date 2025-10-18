@@ -189,3 +189,14 @@ footer{
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(3,200px);
 }
+
+/* GRID FLUJO */
+.grid-flow{
+    display: grid;
+    /* Grid 5cxX4f */
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,150px);
+    grid-auto-flow: row; /*por defecto*/
+    grid-auto-rows: 10px;
+
+}
