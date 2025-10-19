@@ -197,6 +197,23 @@ footer{
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(3,150px);
     grid-auto-flow: row; /*por defecto*/
-    grid-auto-rows: 10px;
+    grid-auto-rows: 100px;
+    grid-auto-flow: column;
+    grid-auto-columns: 50px;
 
+}
+
+/* GRID FLOW DENSE */
+.grid-flow-dense{
+    display: grid;
+    /* Grid 5cxX4f */
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4,200px);
+    grid-auto-flow: row dense
+;
+}
+.grid-flow-dense .item:nth-child(9){
+    background-color: coral;
+    grid-row: span 3;
+    grid-column: span 3;
 }
