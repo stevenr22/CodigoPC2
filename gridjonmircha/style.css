@@ -58,7 +58,12 @@ img {
     background-color: #666;
     border: medium solid #999;
 }
+.sub-item{
+    padding: 1rem;
+    background-color: #DDD;
+    border: medium solid #ccc;
 
+}
 .grid-explicit {
     display: grid;
     /* GRID DE 3*3 */
@@ -366,3 +371,16 @@ footer{
 
 }
 
+.grid-responsive{
+    display: grid;
+    /* cuantas veces se repitira?
+    se repetira auto-fit, ajustate a los elementos que tienes disponibles,  es decir la cuadricula
+    dinamica se formara dependiendo de los items*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid-nested{
+    display: grid;
+    /* Grid de 3cx?r */
+    grid-template-columns: repeat(3,1fr);
+}
